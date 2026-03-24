@@ -26,3 +26,9 @@ app.listen(PORT, () => {
 
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes); // Use auth routes with prefix /api/auth
+
+const workoutRoutes = require('./routes/workoutRoutes');
+app.use('/api/workouts', workoutRoutes); // Use workout routes with prefix /api/workouts
+
+const metricsRoutes = require('./routes/metricsRoutes');
+app.use('/api/metrics', metricsRoutes); // Use metrics routes with prefix /api/metrics
