@@ -1,0 +1,22 @@
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid
+} from "recharts";
+
+function StrengthChart({ data }) {
+  return (
+    <LineChart width={500} height={300} data={data}>
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="date" />
+      <YAxis />
+      <Tooltip />
+      <Line type="monotone" dataKey="maxWeight" stroke="#82ca9d" />
+    </LineChart>
+  );
+}
+
+export default StrengthChart;

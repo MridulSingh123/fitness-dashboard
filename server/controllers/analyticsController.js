@@ -59,7 +59,7 @@ exports.getPlateau=async(req,res)=>{
             const metrics= await Metrics.find({userId: new mongoose.Types.ObjectId(req.user)}).sort({ date: 1 });
 
             if(metrics.length<2){
-                return res.json({message: 'Not enough data to provide insights.'});
+                return res.json(["Not enough data to provide insights."]);
             }
             const sorted = metrics.sort(
   (a, b) => new Date(a.date) - new Date(b.date)
