@@ -32,3 +32,6 @@ app.use('/api/workouts', workoutRoutes); // Use workout routes with prefix /api/
 
 const metricsRoutes = require('./routes/metricsRoutes');
 app.use('/api/metrics', metricsRoutes); // Use metrics routes with prefix /api/metrics
+
+const analyticsRoutes = require('./routes/analyticsRoutes');
+app.use('/api/analytics', analyticsRoutes); // Use analytics routes with prefix /api/analytics
